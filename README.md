@@ -35,6 +35,6 @@ dirac = dirac.DiracStore(swift_container, kafka_topic)
 dirac.store(swift_path_root, path_to_file_on_local_system)
 ```
 
-This will store the file in your object store under the given base and path, then send a resource message describing the file to the Kafka topic you have specified.
+This will store the file in your object store under the given base and path, then send a resource message (encoded using the [OHSU Computational Biology schema](https://github.com/bmeg/bmeg-schemas/blob/master/ohsu/schema/core.proto)) describing the file to the Kafka topic you have specified.
 
 !
